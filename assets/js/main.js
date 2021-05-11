@@ -4,6 +4,47 @@ Creare un array di oggetti, ogni oggetto descriverà una bici da corsa con le se
 - peso.
 Stampare a schermo la bici con peso minore utilizzando destructuring e template literal */
 
+const bici = [
+
+    {
+        nome: "Graziella",
+        peso: 15
+    },
+
+    {
+        nome: "Corsa",
+        peso: 5
+    },
+
+    {
+        nome: "mountain-bike",
+        peso: 35
+    },
+
+    {
+        nome: "corsa ultra light",
+        peso: 2
+    },
+
+    {
+        nome: "elettrica",
+        peso: 30
+    },
+]
+let { peso: pesoBiciLeggera, nome: nomeBiciLeggera } = bici[0];
+
+console.log(pesoBiciLeggera);
+
+
+for (let i = 1; i < bici.length; i++) {
+    if (pesoBiciLeggera > bici[i].peso) {
+        nomeBiciLeggera = bici[i].nome;
+        pesoBiciLeggera = bici[i].peso;
+    }
+}
+
+console.log(`La bici più leggera è la ${nomeBiciLeggera} con un po di soli ${pesoBiciLeggera} Kg`);
+
 
 
 /* Snack2:
