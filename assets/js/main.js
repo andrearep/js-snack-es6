@@ -171,6 +171,9 @@ function elementselector(string, a, b) {
     } return arraySelector;
 
 }*/
-
 let arrayProva = elementselector("ciaociao", 2, 6);
-console.log(arrayProva);
+if (arrayProva) {
+    console.log(`la parte di array selezionato è "${arrayProva}"`);
+} else {
+    alert("errore dati inseriti nella funzione sbagliati")
+}
