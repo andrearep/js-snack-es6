@@ -115,27 +115,62 @@ for (let i = 0; i < squadre.length; i++) {
 Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
  */
-let i = 0;
 
-function elementselector(array, a, b) {
+//gunzioni per trasformare un array in una stringa e viceversa
+function stringToArray(string) {
+    let array = [];
+    for (let i = 0; i < string.length; i++) {
+        array.push(string[i])
+        console.log(array);
+    } return array;
+}
+
+function arrayToString(array) {
+    string = "";
+    for (let i = 0; i < array.length; i++) {
+        string += array[i];
+    } return string;
+
+}
+
+//funzione con filter
+
+function elementselector(string, a, b) {
     //controllo dei valori inseriti nella funzione
-    if (a > b || b > array, length || isNaN(a) || isNaN(b) || !isNaN(array)) {
-        alert("errore! l'array è più corto di b o a è maggiore di b")
+    if (a > b || b > string, length || isNaN(a) || isNaN(b) || !isNaN(string)) {
+        return false;
     } else {
-        let arraySelector = array.filter((letter) => {
-
-            if (i > a && i < b) {
-                i++;
+        arrayReal = stringToArray(string);
+        let arraySelector = arrayReal.filter((letter, index) => {
+            if (index > a && index < b) {
                 return true;
             } else {
-                i++;
                 return false;
             }
-
         });
+        arraySelector = arrayToString(arraySelector)
+        return arraySelector;
     }
-    return arraySelector;
 }
+
+
+//funzione con forEach
+/* function elementselector(stringa, a, b) {
+
+    //controllo dei valori inseriti nella funzione
+    if (a > b || b > stringa, length || isNaN(a) || isNaN(b) || !isNaN(stringa)) {
+        return false;
+    } else {
+        let arrayReal = stringToArray(stringa);
+        arrayReal.forEach((element, index) => {
+
+            if (index > a && index < b) {
+                arraySelector += element;
+            }
+        });
+    } return arraySelector;
+
+}*/
 
 let arrayProva = elementselector("ciaociao", 2, 6);
 console.log(arrayProva);
