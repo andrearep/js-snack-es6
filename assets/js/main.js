@@ -111,3 +111,31 @@ for (let i = 0; i < squadre.length; i++) {
     console.log(squadreFalli);
 }
 
+/* Snack 3:
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+ */
+let i = 0;
+
+function elementselector(array, a, b) {
+    //controllo dei valori inseriti nella funzione
+    if (a > b || b > array, length || isNaN(a) || isNaN(b) || !isNaN(array)) {
+        alert("errore! l'array è più corto di b o a è maggiore di b")
+    } else {
+        let arraySelector = array.filter((letter) => {
+
+            if (i > a && i < b) {
+                i++;
+                return true;
+            } else {
+                i++;
+                return false;
+            }
+
+        });
+    }
+    return arraySelector;
+}
+
+let arrayProva = elementselector("ciaociao", 2, 6);
+console.log(arrayProva);
